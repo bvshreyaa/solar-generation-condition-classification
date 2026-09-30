@@ -1,0 +1,46 @@
+SOLAR GENERATION CONDITION CLASSIFICATION
+
+Abstract
+This project presents an educational machine-learning prototype for classifying solar-generation operating conditions as Low, Medium, or High. The prototype uses solar output, irradiance, temperature, cloud indicator and time of day. A synthetic dataset was generated because an assigned dataset was not available. The workflow includes data-quality checks, exploratory data analysis, preprocessing, classification-model comparison and a Streamlit demonstration. Logistic Regression, K-Nearest Neighbors and Decision Tree classifiers were evaluated using accuracy, precision, recall and F1-score. The best-performing model in this experiment was Logistic Regression. The prototype is educational and is not intended for real-world operational control.
+
+1. Introduction
+Solar generation changes with environmental and operating conditions. Irradiance, cloud cover, temperature and time of day influence generation. Classification provides a simple way to categorize operating states.
+
+2. Problem Definition
+Classify a solar-generation observation into Low, Medium or High generation condition using generation and environmental measurements.
+
+3. Dataset
+The dataset is synthetic and contains solar output, irradiance, temperature, cloud indicator, time of day and the target generation condition. Missing values and duplicate rows were intentionally included to demonstrate data-quality handling.
+
+4. Methodology
+The workflow consists of inspection, missing-value and duplicate checks, EDA, train-test splitting, preprocessing, model training and evaluation. Numerical missing values are median-imputed and standardized. Time of day is imputed using the most frequent value and one-hot encoded.
+
+5. EDA
+The analysis examines class distribution, numerical distributions and the relationship between irradiance and solar output.
+
+6. Model Development
+Logistic Regression, KNN and Decision Tree classifiers were compared using the same preprocessing strategy.
+
+7. Results
+Logistic Regression: Accuracy=0.996, Precision=0.996, Recall=0.996, F1=0.996.
+KNN: Accuracy=0.979, Precision=0.979, Recall=0.979, F1=0.979.
+Decision Tree: Accuracy=0.933, Precision=0.939, Recall=0.933, F1=0.935.
+
+The selected prototype model is Logistic Regression, based on the highest F1-score in this experiment.
+
+8. Discussion
+The results demonstrate an end-to-end classification workflow on the synthetic dataset.
+
+9. Limitations
+The data is synthetic and therefore cannot establish real-world solar-plant performance.
+
+10. Future Scope
+Future work can use real plant data, weather forecasts, temporal models, explainable AI, anomaly detection and model monitoring.
+
+11. Conclusion
+A reproducible classification workflow was implemented from data preparation and EDA through model evaluation and a lightweight Streamlit application.
+
+12. References
+1. Pedregosa et al., Scikit-learn: Machine Learning in Python, Journal of Machine Learning Research.
+2. McKinney, Python for Data Analysis.
+3. LearnDepth Academy LLP, Final Capstone Problem Statement — Solar Generation Condition Classification.
